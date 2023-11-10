@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 
 
     // Build file path
-    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
+    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'home.html' : req.url);
     
     //Extension of the file
     let extname = path.extname(filePath);
