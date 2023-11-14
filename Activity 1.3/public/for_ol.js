@@ -1,7 +1,7 @@
 
 var mapView = new ol.View({
     center: ol.proj.fromLonLat([125.568014,8.890400]), //Butuan City Center Coodinates
-    zoom: 5,
+    zoom: 7,
 });
 
 var map = new ol.Map({
@@ -135,8 +135,11 @@ map.on('singleclick', function(e){
             $.getJSON(url, function(data){
                 var feature = data.features[0];
                 var props = feature.properties;
-                content.innerHTML = "<h3> LANDCOVER: </h3> <p>" + props.LCOV.toUpperCase() + 
-                "</p> <br> <h3> PROVINCE: </h3> <p>" + props.PROVINCE + "</p> <br> <h3> AREA: </h3> <p>" + props.AREA + "</p> <br> <h3> REGION: </h3> <p>" + props.REGION + "</p>";
+                content.innerHTML =  
+                "<h3 style='display: inline-block;'>Landcover:</h3><p style='display: inline-block;'>" + props.LCOV.toUpperCase() + "</p><br>" +
+                "<h3 style='display: inline-block;'>Area:</h3><p style='display: inline-block;'>" + props.AREA + "</p><br>" +
+                "<h3 style='display: inline-block;'>Region:</h3><p style='display: inline-block;'>" + props.REGION + "</p>";
+
                 popup.setPosition(e.coordinate);
             })
         }
@@ -902,7 +905,3 @@ function newaddRowHandlers(){
         }(rows[i]);
     }
 }
-
-
-  
-  
