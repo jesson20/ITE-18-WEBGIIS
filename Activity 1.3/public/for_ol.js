@@ -137,6 +137,7 @@ map.on('singleclick', function(e){
                 var props = feature.properties;
                 content.innerHTML =  
                 "<h3 style='display: inline-block;'>Landcover:</h3><p style='display: inline-block;'>" + props.LCOV.toUpperCase() + "</p><br>" +
+                "<h3 style='display: inline-block;'>Province:</h3><p style='display: inline-block;'>" + props.PROVINCE + "</p><br>" +
                 "<h3 style='display: inline-block;'>Area:</h3><p style='display: inline-block;'>" + props.AREA + "</p><br>" +
                 "<h3 style='display: inline-block;'>Region:</h3><p style='display: inline-block;'>" + props.REGION + "</p>";
 
